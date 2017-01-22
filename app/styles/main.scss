@@ -3,9 +3,11 @@
 @import "bower_components/flexboxgrid-sass/flexboxgrid.scss";
 // endbower
 
+@import "https://cdn.klever.space/licons/v2.0/licons.min.css";
 @import "../sass/webfonts";
 @import "../sass/variables";
 @import "../sass/colors";
+@import "../sass/hover";
 
 .browserupgrade { margin: 0.2em 0; background: $gray; color: black; padding: 0.2em 0; }
 
@@ -83,6 +85,23 @@ a {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+#icons {
+    min-height: 96px;
+    background-image: url("../images/icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    #icon {
+        //display: none;
+        visibility: hidden;
+        font-size: 64px;
+        line-height: 96px;
+        vertical-align: middle;
+        margin: 0;
+        color: $yellow;
+    }
 }
 
 .middle-xs {

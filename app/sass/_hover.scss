@@ -1,0 +1,36 @@
+
+$links:
+        graduation-cap,
+        map-marker,
+        rocket,
+        envelope,
+        linkedin,
+        behance,
+        dribbble,
+        instagram,
+        twitter;
+
+@each $link in $links {
+
+    .hover-#{$link} {
+        background-color: $gray;
+
+        #icons {
+            background: none;
+
+            #icon {
+                visibility: visible;
+            }
+        }
+
+        h1 { color: $gray; }
+
+        a {
+            color: $gray;
+
+            &##{$link} {
+                color: black;
+            }
+        }
+    }
+}
