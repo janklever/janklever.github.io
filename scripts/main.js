@@ -1,1 +1,1 @@
-"use strict";console.log("'Allo 'Allo!");
+"use strict";console.log("Jan Klever"),$("a").on("mouseenter",function(){var o=$(this).attr("id");$("#icon").html(o),$("body").addClass("hover-"+o)}),$("a").on("mouseout",function(){$(this).attr("id");$("body").removeClass().fadeIn()});
