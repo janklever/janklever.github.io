@@ -14,19 +14,26 @@ $links:
 
     .hover-#{$link} {
         background-color: $gray;
+        @include transition(background-color $transition-time linear);
 
         #icons {
-            background: none;
+            //background: none;
+            //@include transition(background .5s linear);
 
             #icon {
-                visibility: visible;
+                @include opacity(1);
+                @include transition(all $transition-time linear);
             }
         }
 
-        h1 { color: $gray; }
+        h1 {
+            color: $gray;
+            @include transition(color $transition-time linear);
+        }
 
         a {
             color: $gray;
+            @include transition(color $transition-time linear);
 
             &##{$link} {
                 color: black;

@@ -3,6 +3,7 @@
 @import "bower_components/flexboxgrid-sass/flexboxgrid.scss";
 // endbower
 
+@import "../sass/mixins";
 @import "https://cdn.klever.space/licons/v2.0/licons.min.css";
 @import "../sass/webfonts";
 @import "../sass/variables";
@@ -27,6 +28,7 @@ body {
     font-size: 22px;
     line-height: 44px;
     color: $gray;
+    @include transition(background-color $transition-time linear);
 }
 
 h1 {
@@ -37,6 +39,7 @@ h1 {
     text-align: left;
     letter-spacing: 4px;
     color: $yellow;
+    @include transition(color $transition-time linear);
 }
 
 h6 {
@@ -82,25 +85,30 @@ ul {
 }
 
 a {
-    color: black;
     text-decoration: none;
     cursor: pointer;
+    color: black;
+    @include transition(color $transition-time linear);
 }
 
 #icons {
     min-height: 96px;
-    background-image: url("../images/icon.svg");
+    background: transparent url("../images/icon.svg");
     background-position: center;
     background-repeat: no-repeat;
 
     #icon {
-        //display: none;
-        visibility: hidden;
+        width: 96px;
+        height: 96px;
+        display: inline-block;
+        background-color: white;
         font-size: 64px;
         line-height: 96px;
         vertical-align: middle;
         margin: 0;
         color: $yellow;
+        @include opacity(0);
+        @include transition(all $transition-time linear);
     }
 }
 
